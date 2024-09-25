@@ -1,0 +1,4 @@
+default_backup/
+profiles/
+
+*.json*
