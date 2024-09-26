@@ -64,7 +64,7 @@ if ($profile_idx -eq 0)
 }
 elseif (1 -isnot [int] -or $profile_idx -lt 0 -or $profile_idx -gt $profiles.Count)
 {
-    Write-Output "Invalid profile input"
+    Write-Error "Invalid profile input"
     exit -1
 }
 else

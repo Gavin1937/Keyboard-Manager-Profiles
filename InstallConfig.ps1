@@ -5,7 +5,7 @@ param (
 
 if ((Test-Path $Src) -eq $false)
 {
-    Write-Output "Input Source location does not exists"
+    Write-Error "Input Source location does not exists"
     exit -1
 }
 
