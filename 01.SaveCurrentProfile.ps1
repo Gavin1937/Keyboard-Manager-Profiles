@@ -2,6 +2,17 @@ param (
     [Parameter(Mandatory=$true,Position=0)][string]$ProfileName = $(Read-Host -Prompt "Enter Profile Name")
 )
 
+# param check
+$RESERVED_NAMES = @("0")
+foreach ($name in $RESERVED_NAMES)
+{
+    if ($ProfileName.Trim().ToLower() -eq $name.Trim().ToLower())
+    {
+        Write-Error "Input profile name is reserved"
+        exit -1
+    }
+}
+
 $KBMGR_DEFAULT_CONF = "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json"
 $PROFILE_LOCATION = "$PSScriptRoot\profiles"
 $PROFILE_FILENAME = "$ProfileName.json"
