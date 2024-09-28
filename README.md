@@ -22,7 +22,7 @@ Inspired by [this issue](https://github.com/microsoft/PowerToys/issues/1881)
 # Examples
 
 ```pwsh
-# backup default profile (will use current current file in "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json" as default profile)
+# backup default profile (will use current file in "$env:LOCALAPPDATA\Microsoft\PowerToys\Keyboard Manager\default.json" as default profile)
 .\00.BackupDefault.ps1
 
 # or, you can add a MAX_BACKUP_LENGTH (default 5) to limit how many backup files you want
